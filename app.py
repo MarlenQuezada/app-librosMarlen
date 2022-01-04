@@ -4,7 +4,7 @@ from flask_bcrypt import Bcrypt
 
 
 app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='postgres://xwinyxknvuajbv:9d5114fd12e3b869924d867d9626f615163477175863ccf2cc5151d698f4ac2e@ec2-34-193-235-32.compute-1.amazonaws.com:5432/d8rij02cf5jpra'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://xwinyxknvuajbv:9d5114fd12e3b869924d867d9626f615163477175863ccf2cc5151d698f4ac2e@ec2-34-193-235-32.compute-1.amazonaws.com:5432/d8rij02cf5jpra'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
