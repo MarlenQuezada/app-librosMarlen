@@ -142,15 +142,6 @@ def registrarLibro():
 def leerlibro():
     conulta_libro= Libro.query.join(Genero,Libro.id_genero==Genero.id_genero).join(Autor,Libro.id_autor==Autor.id_autor).join(Editorial,Libro.id_editorial==Editorial.id_editorial).add_columns(Libro.titulo_libro,Libro.fecha_publicacion,Libro.numero_paginas,Libro.formato,Libro.volumen,Editorial.nombre_editorial,Genero.nombre_genero,Autor.nombre_autor)
     print(conulta_libro)
-    for libros in conulta_libro:
-        print(libros.titulo_libro)
-        print(libros.fecha_publicacion)
-        print(libros.numero_paginas)
-        print(libros.formato)
-        print(libros.volumen)
-        print(libros.id_editorial)
-        print(libros.id_genero)
-        print(libros.id_autor)
     return render_template("Libro.html", constlta = conulta_libro)
 
 @app.route("/eliminarLibro/<id>")
