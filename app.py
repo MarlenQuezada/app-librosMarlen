@@ -93,7 +93,7 @@ def login():
 
 @app.route("/registrar")
 def registrar():
-    return render_template("registro.html")
+    return render_template("Registro.html")
 
 @app.route("/registrar_usuario", methods=['POST'])
 def registrar_usuario():
