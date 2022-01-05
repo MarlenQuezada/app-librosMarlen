@@ -110,7 +110,7 @@ def registrar_usuario():
 
 @app.route("/iniciar_sesion")
 def iniciar_sesion():
-    redirect("")
+    redirect("/")
 #-----------------------------------------------------------LIBRO------------------------------------------------
 @app.route("/libro")
 def libro():
